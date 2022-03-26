@@ -27,13 +27,14 @@
     </head>
 <body>
     
-    <div class="container px-5">
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="container px-5 pt-5">
+        <div class="row row-cols-1 align-items-center row-cols-md-4 g-3">
+            
             <section class="col">
                 <div class="card bg-danger text-white">
-                    <img src="https://picsum.photos/id/514/600/400" class="card-img-top" alt="...">
+                    <!-- <img src="https://picsum.photos/id/514/600/400" class="card-img-top" alt="..."> -->
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">Operaciones con 2 números</h5>
                         <p class="card-text fs-6">Ingresa dos numeros mayores a 0 y presiona Intro. El sistema calculará la suma, resta, multiplicación y división de esos números.</p>
                         <hr>
                         <form id="id-operaciones">
@@ -52,38 +53,63 @@
                                     <button type="submit" class="btn btn-outline-light mt-4">Calcular</button>
                                 </div>
                             </div>
-                            <textarea title="resultados" name="opera-resultado" class="w-100 fs-6" id="opera-resultado" rows="4" disabled>Calculando resultados...</textarea>
+                            <textarea title="resultados" name="name-opera-resultado" class="w-100 fs-6" id="opera-resultado" rows="4" disabled>Calculando resultados...</textarea>
                         </form>
                     </div>
                 </div>
             </section>
+
             <section class="col">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
+                <div class="card bg-success text-white">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <h5 class="card-title">Celsius a F° y K°</h5>
+                        <p class="card-text fs-6">Ingresa una temperatura en C° hasta -273° y el sistema la convertirá a Fahrenheit y Kelvin.</p>
+                        <hr>
+                        <form id="id-temperaturas">
+                            <div class="row mb-4">
+                                <div class="col-6">
+                                    <label for="temperatura-number-1" class="form-label fs-6">Grados C°</label>
+                                    <input type="number" min="-273" value="1" class="form-control fs-6" id="temperatura-celsius" placeholder="1">   
+                                </div>
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <button type="submit" class="btn btn-outline-light mt-4">Calcular</button>
+                                </div>
+                            </div>
+                            <label for="temperatura-kelvin">Grados K°</label>
+                            <textarea title="resultados" name="temperatura-kelvin" class="w-100 fs-6" id="" rows="1" disabled>Calculando resultados...</textarea>
+                            <label for="temperatura-kelvin">Grados F°</label>
+                            <textarea title="resultados" name="temperatura-kelvin" class="w-100 fs-6" id="" rows="1" disabled>Calculando resultados...</textarea>
+                        </form>
                     </div>
                 </div>
             </section>
+
             <section class="col">
-                <div class="card">
-                <img src="..." class="card-img-top" alt="...">
+                <div class="card bg-primary text-white">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        <h5 class="card-title">Dias a años, semanas, días</h5>
+                        <p class="card-text fs-6">Ingresa una cantidad de días mayor a 0 y el sistema devolverá la cantidad de días, semanas y dias correspondientes.</p>
+                        <hr>
+                        <form id="id-dias">
+                            <div class="row mb-4">
+                                <div class="col-6">
+                                    <label for="dias" class="form-label fs-6">Dias</label>
+                                    <input type="number" min="1" value="1" class="form-control fs-6" name="dias" placeholder="1">   
+                                </div>
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <button type="submit" class="btn btn-outline-light mt-4">Calcular</button>
+                                </div>
+                            </div>
+                            <label for="dias-resultado">Resultado</label>
+                            <textarea title="resultados" name="dias-resultado" class="w-100 fs-6" rows="3" disabled>Calculando...</textarea>
+                        </form>
                     </div>
                 </div>
             </section>
-            <section class="col">
-                <div class="card">
-                    <img src="..." class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </section>
+
+            
+
+
         </div>
     </div>
     

@@ -1,10 +1,10 @@
 ## Desafio "nombre del desafio"
 
-|Bootcamp 2022 Modulo x|Nombre del modulo|
+|Bootcamp 2022 Modulo 4|Fundamentos de Javascript|
 |----|-----|
-|**Unidad**|nombre unidad|
+|**Unidad**|Introducción a Javascript|
 |**Día Bootcamp**|xx/?|
-|**Día Modulo**|xx/18|
+|**Día Modulo**|2/15|
 
 
-El desafío 'mi-desafio' describe el desafio de forma clara y concisa aportando información distinta a la de la tabla.
+Este desafío es parte del módulo 4. No puedo ver los contenidos pero puedo ver los desafíos así que voy a avanzar de a poco en lo que la data del requerimiento lo permita, luego el repo cambiará de nombre al que llevará permanentemente al cononcer el día del bootcamp en que aparece este desafío.
