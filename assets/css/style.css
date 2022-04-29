@@ -1,3 +1,25 @@
 /* body * {
     outline: 1px solid red;
 } Solo para desarrollo */
+
+
+body { 
+  background: var(--bs-gray-600);
+  background: url('../img/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  background: rgba(0,0,0, 0.7);
+}
+
+.row > :nth-child(3) .card {
+  background: var(--bs-pink);
+}
+
+.card {
+  border: 4px solid rgba(0, 0, 0, .7);
+  box-shadow: 0 0 4px 8px rgba(255, 255, 255, .7)
+}

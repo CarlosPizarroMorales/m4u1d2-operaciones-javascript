@@ -1,126 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!-- metadata para chartset, compatibilidad con explorer/edge y para viewport inicial -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- metadata descriptiva del documento -->
-        <meta name="author" content="Carlos Pizarro Morales">
-        <meta name="curso" content="Frontend Trainee Vuejs 0013">
-        <!-- cambiar datos en los sigientes 2 meta y luego borrar este comentario -->
-        <meta name="description" content="Desafío [---] de la unidad [num-nombre--unidad] del módulo [num-nombre--modulo] Bootcamp 2022">
-        <meta name="details" content="[--describo los aspectos relevantes de este desafio--]">
-        
-        <!-- Ícono del browser, fuentes e iconos externos, y CSS  de Bootstrap -->
-        <link rel="shortcut icon" href="./favicon.png" type="image/icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        
-        <!-- Mi CSS -->
-        <link rel="stylesheet" href="./assets/css/style.css">
-        
-        <title>Desafío [--nombre--]</title>
-    </head>
+<head>
+  <!-- metadata para chartset, compatibilidad con explorer/edge y para viewport inicial -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- metadata descriptiva del documento -->
+  <meta name="author" content="Carlos Pizarro Morales">
+  <meta name="curso" content="Frontend Trainee Vuejs 0013">
+  <meta name="description" content="Desafío 1° de la unidad 1- Introducción al lenguaje Javascript - Módulo 4 - Fundamentos de programación en Javascript - Bootcamp 2022">
+  <meta name="details" content="Desarrollo que aborda el uso de variables y operadores matemáticos en Javascript">
+
+  <!-- Ícono del browser, fuentes e iconos externos, y CSS  de Bootstrap -->
+  <link rel="shortcut icon" href="./favicon.ico" type="image/icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+  
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- Mi CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Desafío Operadores Matemáticos</title>
+</head>
+
 <body>
-    
-    <div class="container px-5 pt-5">
-        <div class="row row-cols-1 align-items-center row-cols-md-4 g-3">
-            
-            <section class="col">
-                <div class="card bg-danger text-white">
-                    <!-- <img src="https://picsum.photos/id/514/600/400" class="card-img-top" alt="..."> -->
-                    <div class="card-body">
-                        <h5 class="card-title">Operaciones con 2 números</h5>
-                        <p class="card-text fs-6">Ingresa dos numeros mayores a 0 y presiona Intro. El sistema calculará la suma, resta, multiplicación y división de esos números.</p>
-                        <hr>
-                        <form id="id-operaciones">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="mb-2">
-                                        <label for="opera-number-1" class="form-label fs-6">Número 1</label>
-                                        <input type="number" min="1" value="1" class="form-control fs-6" id="opera-number-1" placeholder="1">   
-                                    </div>
-                                    <div class="mb-2">
-                                        <label for="opera-number-2" class="form-label fs-6">Número 2</label>
-                                        <input type="number" min="1" value="1" class="form-control fs-6" id="opera-number-2" placeholder="1">
-                                    </div>
-                                </div>
-                                <div class="col-6 d-flex  justify-content-center align-items-center">
-                                    <button type="submit" class="btn btn-outline-light mt-4">Calcular</button>
-                                </div>
-                            </div>
-                            <textarea title="resultados" name="name-opera-resultado" class="w-100 fs-6" id="opera-resultado" rows="4" disabled>Calculando resultados...</textarea>
-                        </form>
-                    </div>
+  
+  <!-- 1 container general y filas de 1 o 2 columnas a partir de md -->
+  <div class="container p-3 mt-5 rounded-3">
+    <div class="row row-cols-1 row-cols-lg-2 g-5">
+
+      <!-- Ejercicio 1 Operaciones con 2 números -->
+      <section class="col">
+        <div class="card h-100 bg-danger text-white">
+          <div class="card-body">
+            <h5 class="card-title">Operaciones con 2 números</h5>
+            <p class="card-text fs-6">Ingresa dos numeros mayores a 0 y presiona Intro. El sistema calculará la suma, resta, multiplicación y división de esos números.</p>
+            <hr>
+            <form id="id-operaciones">
+              <div class="row">
+                <div class="col-6">
+                  <div class="mb-2">
+                    <label for="opera-number-1" class="form-label fs-6">Número 1</label>
+                    <input type="number" min="1" value="1" class="form-control fs-6" id="opera-number-1" placeholder="1" required>
+                  </div>
+                  <div class="mb-2">
+                    <label for="opera-number-2" class="form-label fs-6">Número 2</label>
+                    <input type="number" min="1" value="1" class="form-control fs-6" id="opera-number-2" placeholder="1" required>
+                  </div>
                 </div>
-            </section>
-
-            <section class="col">
-                <div class="card bg-success text-white">
-                    <div class="card-body">
-                        <h5 class="card-title">Celsius a F° y K°</h5>
-                        <p class="card-text fs-6">Ingresa una temperatura en C° hasta -273° y el sistema la convertirá a Fahrenheit y Kelvin.</p>
-                        <hr>
-                        <form id="id-temperaturas">
-                            <div class="row mb-4">
-                                <div class="col-6">
-                                    <label for="temperatura-number-1" class="form-label fs-6">Grados C°</label>
-                                    <input type="number" min="-273" value="1" class="form-control fs-6" id="temperatura-celsius" placeholder="1">   
-                                </div>
-                                <div class="col-6 d-flex justify-content-center align-items-center">
-                                    <button type="submit" class="btn btn-outline-light mt-4">Calcular</button>
-                                </div>
-                            </div>
-                            <label for="temperatura-kelvin">Grados K°</label>
-                            <textarea title="resultados" name="temperatura-kelvin" class="w-100 fs-6" id="" rows="1" disabled>Calculando resultados...</textarea>
-                            <label for="temperatura-kelvin">Grados F°</label>
-                            <textarea title="resultados" name="temperatura-kelvin" class="w-100 fs-6" id="" rows="1" disabled>Calculando resultados...</textarea>
-                        </form>
-                    </div>
+                <div class="col-6 d-flex  justify-content-center align-items-center">
+                  <button type="submit" class="btn btn-outline-light mt-4">Calcular</button>
                 </div>
-            </section>
-
-            <section class="col">
-                <div class="card bg-primary text-white">
-                    <div class="card-body">
-                        <h5 class="card-title">Dias a años, semanas, días</h5>
-                        <p class="card-text fs-6">Ingresa una cantidad de días mayor a 0 y el sistema devolverá la cantidad de días, semanas y dias correspondientes.</p>
-                        <hr>
-                        <form id="id-dias">
-                            <div class="row mb-4">
-                                <div class="col-6">
-                                    <label for="dias" class="form-label fs-6">Dias</label>
-                                    <input type="number" min="1" value="1" class="form-control fs-6" name="dias" placeholder="1">   
-                                </div>
-                                <div class="col-6 d-flex justify-content-center align-items-center">
-                                    <button type="submit" class="btn btn-outline-light mt-4">Calcular</button>
-                                </div>
-                            </div>
-                            <label for="dias-resultado">Resultado</label>
-                            <textarea title="resultados" name="dias-resultado" class="w-100 fs-6" rows="3" disabled>Calculando...</textarea>
-                        </form>
-                    </div>
-                </div>
-            </section>
-
-            
-
-
+              </div>
+              <textarea title="resultados" name="name-opera-resultado" class="w-100 fs-6" id="opera-resultado" rows="4" disabled>Calculando resultados...</textarea>
+            </form>
+          </div>
         </div>
-    </div>
-    
-    <!-- Script para jQuery 3.6.0 por CDN -->
-    <!-- Eliminar si no es necesario -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <!-- Script para el bundle BS de Javascript + Popper por CDN-->
-    <!-- Eliminar si no es necesario -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- Mi script -->
-    <script src="./assets/js/index.js"></script>
-</body>
-</html>
+      </section>
 
+      <!-- Ejercicio 2 Transformar temperatura C° a Fahrenheit y Kelvin -->
+      <section class="col">
+        <div class="card h-100 bg-success text-white">
+          <div class="card-body">
+            <h5 class="card-title">Celsius a F° y K°</h5>
+            <p class="card-text fs-6">Ingresa una temperatura en C° hasta -273° y el sistema la convertirá a Fahrenheit y Kelvin.</p>
+            <hr>
+            <form id="id-temperaturas">
+              <div class="row mb-4">
+                <div class="col-6">
+                  <label for="temperatura-number-1" class="form-label fs-6">Grados C°</label>
+                  <input type="number" min="-273" value="1" class="form-control fs-6" id="temperatura-celsius" placeholder="1" required>
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                  <button type="submit" class="btn btn-outline-light mt-4">Calcular</button>
+                </div>
+              </div>
+              <label for="temperatura-kelvin">Grados K°</label>
+              <textarea title="resultados" name="temperatura-kelvin" class="w-100 fs-6" id="" rows="1" disabled>Calculando resultados...</textarea>
+              <label for="temperatura-kelvin">Grados F°</label>
+              <textarea title="resultados" name="temperatura-kelvin" class="w-100 fs-6" id="" rows="1" disabled>Calculando resultados...</textarea>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ejercicio 3 - Transformar días a años-semanas-días -->
+      <section class="col">
+        <div class="card h-100 text-white">
+          <div class="card-body">
+            <h5 class="card-title">Dias a años, semanas, días</h5>
+            <p class="card-text fs-6">Ingresa una cantidad de días mayor a 0 y el sistema devolverá la cantidad de días, semanas y dias correspondientes.</p>
+            <hr>
+            <form id="id-dias">
+              <div class="row mb-4">
+                <div class="col-6">
+                  <label for="dias" class="form-label fs-6">Dias</label>
+                  <input type="number" min="1" value="1" class="form-control fs-6" name="dias" placeholder="1" required>
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                  <button type="submit" class="btn btn-outline-light mt-4">Calcular</button>
+                </div>
+              </div>
+              <label for="dias-resultado">Resultado</label>
+              <textarea title="resultados" name="dias-resultado" class="w-100 fs-6" rows="2" disabled>Calculando...</textarea>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ejercicio 4 - Devolver suma y promedio de 5 valores  -->
+      <section class="col">
+        <div class="card h-100 bg-warning text-dark">
+          <div class="card-body">
+            <h5 class="card-title">Cinco números</h5>
+            <p class="card-text fs-6">Ingresa 5 números y el sistema devolverá la suma y promedio de esos números.</p>
+            <hr>
+            <form id="id-suma-promedio">
+              <div class="row mb-4">
+                <div class="col-6">
+                  <div class="w-100 d-flex justify-content-between align-items-center">
+                    <label for="suma-resultado" class="ms-5 text-nowrap me-3">N° 1:</label>
+                    <input type="number" title="resultados" name="suma-resultado" class="form-control fs-6" min="1" value="1" required>
+                  </div>
+                  <div class="w-100 d-flex justify-content-between align-items-center">
+                    <label for="suma-resultado" class="ms-5 text-nowrap me-3">N° 2:</label>
+                    <input type="number" title="resultados" name="suma-resultado" class="form-control fs-6" min="1" value="1" required>
+                  </div>
+                  <div class="w-100 d-flex justify-content-between align-items-center">
+                    <label for="suma-resultado" class="ms-5 text-nowrap me-3">N° 3:</label>
+                    <input type="number" title="resultados" name="suma-resultado" class="form-control fs-6" min="1" value="1" required>
+                  </div>
+                  <div class="w-100 d-flex justify-content-between align-items-center">
+                    <label for="suma-resultado" class="ms-5 text-nowrap me-3">N° 4:</label>
+                    <input type="number" title="resultados" name="suma-resultado" class="form-control fs-6" min="1" value="1" required>
+                  </div>
+                  <div class="w-100 d-flex justify-content-between align-items-center">
+                    <label for="suma-resultado" class="ms-5 text-nowrap me-3">N° 5:</label>
+                    <input type="number" title="resultados" name="suma-resultado" class="form-control fs-6" min="1" value="1" required>
+                  </div>
+                </div>
+                <div class="col-6 d-flex flex-column justify-content-center align-items-center">
+                  <button type="submit" class="btn btn-outline-light mb-4">Calcular</button>
+                  <div class="w-100 d-flex justify-content-between align-items-center">
+                    <label for="suma-resultado" class="ms-1">Suma:</label>
+                    <textarea title="resultados" name="suma-resultado" class="fs-6" rows="1" disabled>Calculando...</textarea>
+                  </div>
+                  <div class="w-100 d-flex justify-content-between align-items-center">
+                    <label for="promedio-resultado" class="ms-1">Promedio: </label>
+                    <textarea title="resultados" name="promedio-resultado" class="fs-6" rows="1" disabled>Calculando...</textarea>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+
+
+    </div>
+  </div>
+
+  <!-- Script para jQuery 3.6.0 por CDN -->
+  <!-- Eliminar si no es necesario -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Script para el bundle BS de Javascript + Popper por CDN-->
+  <!-- Eliminar si no es necesario -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- Mi script -->
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
