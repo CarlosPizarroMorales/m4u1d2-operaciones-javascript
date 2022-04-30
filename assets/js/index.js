@@ -12,9 +12,9 @@ let sumaPromedioForm = document.querySelector('#id-suma-promedio')
 //*  Podria usar un solo event listener que escuchara todos los forms?
 //! SIP pero ya no lo hice. Hay que escuchar el evento submit en el 
 //! container de los forms y a través del event.target se podrá capturar
-//! el elemento que ha disparado. Así no se desperdecia capacidad de proceso,
+//! el elemento que ha disparado. Así no se desperdicia capacidad de proceso,
 //! pues los listener son funciones "caras" debido a que están oyendo 
-//! constantemente la interacción en la ventana.
+//! constantemente la interacción la usuario/window.
 operacionesForm.addEventListener('submit', operaciones);
 temperaturaForm.addEventListener('submit', temperaturas);
 diasForm.addEventListener('submit', dias);
@@ -89,8 +89,3 @@ function sumaPromedio (e) {
     document.forms[3][6].innerText = suma;
     document.forms[3][7].innerText = promedio;
 }
-
-/**********************************************
- *TODO              Testing                  **
- **********************************************/
-
